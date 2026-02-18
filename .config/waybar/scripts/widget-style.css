@@ -1,0 +1,155 @@
+/* GTK Widget Styling for Waybar Control Panels */
+@import "/home/sh1fter/.cache/wallust/colors-waybar.css";
+
+/* Base Window */
+window {
+    background-color: rgba(20, 20, 25, 0.95);
+    color: @foreground;
+    border: 1px solid @color7;
+    border-radius: 12px;
+}
+
+label {
+    font-family: "JetBrainsMono Nerd Font", "Roboto", sans-serif;
+    font-size: 19px;
+    color: @foreground;
+}
+
+/* Header */
+.header {
+    margin-bottom: 5px;
+}
+
+.title-label {
+    font-size: 18px;
+    font-weight: 800;
+    color: @color4;
+}
+
+/* Buttons */
+button {
+    background-color: rgba(255, 255, 255, 0.05);
+    /* Very subtle */
+    color: @foreground;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+button:active {
+    background-color: @color4;
+    color: #141419;
+}
+
+button:disabled {
+    opacity: 0.5;
+}
+
+button.flat {
+    background-color: transparent;
+}
+
+button.flat:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Switch Styling */
+switch {
+    min-width: 50px;
+    min-height: 28px;
+    background-color: #45475a;
+    border-radius: 99px;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+switch:checked {
+    background-color: @color4;
+}
+
+switch:hover {
+    filter: brightness(1.1);
+}
+
+switch slider {
+    min-width: 20px;
+    min-height: 20px;
+    margin: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: all 0.2s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Network List Items */
+.network-row-container {
+    padding: 0;
+    margin: 0 5px;
+    border-radius: 6px;
+}
+
+.network-item {
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.network-item:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.connected {
+    color: @color4;
+    /* Highlight text/icons */
+    font-weight: bold;
+}
+
+.connected label {
+    color: @color4;
+}
+
+/* Action Area (Inline Password) */
+.action-box {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 6px 6px;
+    padding: 10px;
+}
+
+entry {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: @foreground;
+    border-radius: 4px;
+    padding: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+entry:focus {
+    border-color: @color4;
+}
+
+/* Action Buttons */
+.suggested-action {
+    background-color: @color4 !important;
+    color: #141419 !important;
+    font-weight: bold;
+}
+
+.suggested-action:hover {
+    filter: brightness(1.2);
+}
+
+.destructive-action {
+    background-color: #f38ba8 !important;
+    /* Red-ish from typical palette or hardcode */
+    color: #1e1e2e !important;
+}
+
+/* Scrolled Window */
+scrolledwindow {
+    min-height: 150px;
+}

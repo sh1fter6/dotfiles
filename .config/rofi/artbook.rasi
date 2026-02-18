@@ -1,0 +1,99 @@
+@import "~/.cache/wallust/colors-rofi.rasi"
+
+configuration {
+    modi: "dmenu";
+    font: "Poppins Bold 15";
+    show-icons: true;
+    drun-display-format: "{name}";
+}
+
+* {
+    background:     #000000;
+    background-alt: #1a1a1a;
+    foreground:     #ffffff;
+    active-border:  @color4; 
+    selected:       #222222;
+}
+
+window {
+    transparency: "real";
+    location: center;
+    anchor: center;
+    fullscreen: false;
+    
+   
+    width: 1455px;
+    height: 600px;
+    
+    enabled: true;
+    border: 0px;
+    background-color: @background;
+    cursor: "default";
+    border-radius: 15px; 
+}
+
+mainbox {
+    enabled: true;
+    spacing: 0px;
+    padding: 30px; 
+    background-color: transparent;
+    orientation: vertical;
+    children: [ "listview" ];
+}
+
+/* Ocultar barra completamente */
+inputbar { enabled: false; }
+
+listview {
+    enabled: true;
+    columns: 4; 
+    lines: 1;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    reverse: false;
+    fixed-height: true;
+    fixed-columns: true; 
+    spacing: 20px; 
+    background-color: transparent;
+    text-color: @foreground;
+    cursor: "default";
+}
+
+element {
+    enabled: true;
+    spacing: 5px;
+    padding: 15px 15px 5px 15px;
+    border-radius: 20px; 
+    background-color: transparent;
+    text-color: @foreground;
+    cursor: pointer;
+    orientation: vertical;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @foreground;
+    border: 3px solid; 
+    border-color: @active-border;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color: inherit;
+    size: 420px; 
+    cursor: inherit;
+    horizontal-align: 0.5;
+    border-radius: 15px; 
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    highlight: inherit;
+    cursor: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.5;
+    font: "JetBrainsMono Nerd Font Bold 14";
+}

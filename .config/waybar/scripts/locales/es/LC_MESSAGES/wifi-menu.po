@@ -1,0 +1,37 @@
+# WiFi Menu translations
+# Spanish (es)
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: es\n"
+
+msgid "Forget saved network"
+msgstr "Olvidar red guardada"
+
+msgid "Refresh list"
+msgstr "Refrescar lista"
+
+msgid "Connected"
+msgstr "Conectado"
+
+msgid "Searching networks..."
+msgstr "Buscando redes..."
+
+msgid "No WiFi adapter found"
+msgstr "No se encontró adaptador WiFi"
+
+msgid "Connecting to"
+msgstr "Conectando a"
+
+msgid "Disconnected"
+msgstr "Desconectado"
+
+msgid "No saved networks found"
+msgstr "No hay redes guardadas"
+
+msgid "Forgotten:"
+msgstr "Olvidada:"
+
+msgid "FORGET NETWORK:"
+msgstr "OLVIDAR RED:"

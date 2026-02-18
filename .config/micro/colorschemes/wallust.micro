@@ -1,0 +1,21 @@
+# ESQUEMA WALLUST - PRIORIDAD NANO
+color-link default "foreground,default"
+
+color-link comment "cyan"
+color-link identifier "bold magenta"
+color-link constant.string "green"
+color-link constant.number "bold yellow"
+color-link identifier.var "bold red"
+color-link symbol "magenta"
+color-link preproc "cyan"
+
+color-link statusline "231"
+color-link statusline.msg "231"
+color-link statusline.extension "231"
+color-link statusline.pos "231"
+
+color-link line-number "brightblack"
+color-link current-line-number "bold white"
+color-link cursor-line "default,#1a1a1a"
+color-link selection "1,5"
+color-link tabbar "white,default"

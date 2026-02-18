@@ -1,0 +1,8 @@
+{
+    "colorscheme": "wallust",
+    "linenumbers": true,
+    "lsp.autocomplete": true,
+    "lsp.diagnostics": true,
+    "saveundo": true,
+    "softwrap": true
+}

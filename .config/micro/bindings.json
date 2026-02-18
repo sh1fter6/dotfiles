@@ -1,0 +1,22 @@
+{
+    "Alt-/": "lua:comment.comment",
+    "Alt-A": "SelectAll",
+    "Alt-U": "Undo",
+    "Alt-d": "command:definition",
+    "Alt-f": "command:format",
+    "Alt-k": "command:hover",
+    "Alt-r": "command:references",
+    "Ctrl-Backslash": "command:replace",
+    "Ctrl-C": "Copy",
+    "Ctrl-D": "SpawnMultiCursor",
+    "Ctrl-G": "command:help",
+    "Ctrl-K": "CutLine",
+    "Ctrl-O": "Save",
+    "Ctrl-R": "command:insertfile",
+    "Ctrl-U": "Paste",
+    "Ctrl-W": "Find",
+    "Ctrl-X": "Quit",
+    "Ctrl-_": "command:goto",
+    "CtrlSpace": "command:lspcompletion",
+    "CtrlUnderscore": "lua:comment.comment"
+}

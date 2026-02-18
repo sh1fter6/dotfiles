@@ -1,0 +1,19 @@
+backend = "fast-resize"
+color_space = "lch"
+palette = "hard-dark"
+check_contrast = true
+
+[templates]
+hyprland = { template = "hyprland.conf", target = "~/.cache/wallust/colors-hyprland.conf" }
+waybar = { template = "waybar.css", target = "~/.cache/wallust/colors-waybar.css" }
+wlogout = { template = "wlogout.css", target = "~/.cache/wallust/colors-wlogout.css" }
+kitty = { template = "kitty.conf", target = "~/.cache/wallust/colors-kitty.conf" }
+fish = { template = "colors.fish", target = "~/.config/fish/conf.d/wallust-colors.fish" }
+gtk = { template = "gtk.css", target = "~/.config/gtk-3.0/gtk.css" }
+rofi = { template = "rofi-colors.rasi", target = "~/.config/rofi/colors.rasi" }
+discord = { template = "discord-colors.css", target = "~/.config/Vencord/themes/wallust-generated.css" }
+qt6ct = { template = "qt6ct.conf", target = "~/.config/qt6ct/colors/wallust.conf" }
+swayosd = { template = "swayosd.css", target = "~/.config/swayosd/style.css" }
+dunst = { template = "dunstrc", target = "~/.config/dunst/dunstrc" }
+micro = { template = "micro.micro", target = "~/.config/micro/colorschemes/wallust.micro" }
+hyprlock = { template = "hyprlock.conf", target = "~/.cache/wallust/colors-hyprlock.conf" }

@@ -1,0 +1,43 @@
+window#osd {
+    padding: 24px 30px;
+    border-radius: 99px;
+    border: none;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+#container {
+    margin: 10px;
+}
+
+image, label {
+    color: {{color4 | saturate(0.6)}};
+    font-family: "MesloLGS NF", sans-serif;
+}
+
+/* Hide the volume number */
+label {
+    opacity: 0;
+}
+
+progressbar:dir(ltr),
+progressbar:dir(rtl) {
+    min-height: 8px;
+    border-radius: 99px;
+    background: transparent;
+    border: none;
+}
+
+trough {
+    min-height: 8px;
+    border-radius: 99px;
+    background-color: {{color4 | saturate(0.6) | darken(0.6)}};
+    border: none;
+}
+
+progress {
+    min-height: 8px;
+    border-radius: 99px;
+    background-color: {{color4 | saturate(0.6)}};
+    /* Use box-shadow to simulate a gap by masking the trough with the window background color */
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.6);
+}

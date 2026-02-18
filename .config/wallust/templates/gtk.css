@@ -1,0 +1,14 @@
+@define-color accent_color {{color4}};
+@define-color accent_bg_color {{color4}};
+@define-color window_bg_color rgba(0, 0, 0, 0.9);
+@define-color window_fg_color #ffffff;
+
+window, .background {
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+}
+
+selection {
+    background-color: {{color4}};
+    color: #ffffff;
+}

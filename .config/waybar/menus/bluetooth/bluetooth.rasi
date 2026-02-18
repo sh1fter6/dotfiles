@@ -1,0 +1,78 @@
+configuration {
+    font: "MesloLGMDZ Nerd Font 15";
+    show-icons: false;
+    terminal: "kitty";
+    hover-select: true;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+    click-to-exit: true;
+}
+
+* {
+    bg-color: #000000;
+    fg-color: #FFFFFF;
+    accent-color: #333333;
+    selected-color: #444444;
+    
+    background-color: transparent;
+    text-color: @fg-color;
+}
+
+window {
+    location: northeast;
+    anchor: northeast;
+    x-offset: -105px;
+    y-offset: 0px;
+    width: 300px;
+    background-color: @bg-color;
+    border: 1px;
+    border-color: @accent-color;
+    border-radius: 8px;
+    children: [ mainbox ];
+}
+
+mainbox {
+    padding: 4px;
+    spacing: 0;
+    children: [ listview ];
+}
+
+entry {
+    expand: false;
+    padding: 2px 6px;
+    margin: 0 0 2px 0;
+    text-color: @fg-color;
+    placeholder: "Search...";
+    placeholder-color: #444444;
+    background-color: #080808;
+    border-radius: 4px;
+}
+
+listview {
+    fixed-height: false;
+    dynamic: true;
+    scrollbar: true;
+    spacing: 0px;
+    scroll-method: 1;
+}
+
+element {
+    padding: 2px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+element selected {
+    background-color: @selected-color;
+    text-color: #FFFFFF;
+}
+
+element-text {
+    background-color: inherit;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+element-icon {
+    size: 0;
+}

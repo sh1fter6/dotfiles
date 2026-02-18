@@ -1,0 +1,4 @@
+@define-color background {{background}};
+@define-color foreground {{foreground}};
+@define-color cursor {{cursor}};
+@define-color color2 {{color2 | saturate(0.8)}};

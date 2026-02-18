@@ -1,0 +1,49 @@
+# Bluetooth Menu translations
+# English (en)
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: en\n"
+
+msgid "Forget paired device"
+msgstr "Forget paired device"
+
+msgid "Refresh list"
+msgstr "Refresh list"
+
+msgid "Connected"
+msgstr "Connected"
+
+msgid "Searching devices..."
+msgstr "Searching devices..."
+
+msgid "No paired devices found"
+msgstr "No paired devices found"
+
+msgid "Connecting to"
+msgstr "Connecting to"
+
+msgid "Disconnected from"
+msgstr "Disconnected from"
+
+msgid "Forgotten:"
+msgstr "Forgotten:"
+
+msgid "FORGET DEVICE:"
+msgstr "FORGET DEVICE:"
+
+msgid "Turn on Bluetooth"
+msgstr "Turn on Bluetooth"
+
+msgid "Bluetooth turned on"
+msgstr "Bluetooth turned on"
+
+msgid "Error: Could not contact Bluetooth"
+msgstr "Error: Could not contact Bluetooth"
+
+msgid "Error"
+msgstr "Error"
+
+msgid "Paired device"
+msgstr "Paired device"

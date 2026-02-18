@@ -1,0 +1,151 @@
+/*******************************************************************************
+ * Rofi App Launcher Theme
+ * Estilo: Clean Center Box
+ *******************************************************************************/
+
+@import "~/.cache/wallust/colors-rofi.rasi"
+
+configuration {
+    modi:                       "drun";
+    show-icons:                 true;
+    display-drun:               "Apps";
+    drun-display-format:        "{name}";
+    /* Fuente un poco más grande para legibilidad */
+    font:                       "JetBrainsMono Nerd Font Bold 18";
+    
+    /* Configuración del mouse */
+    hover-select:               true;
+    me-select-entry:            "";
+    me-accept-entry:            "MousePrimary";
+}
+
+* {
+    /* Usamos las variables de Wallust, con fallbacks por seguridad */
+    background:     #000000;
+    background-alt: #1a1a1a;
+    foreground:     #ffffff;
+    selected:       #333333;
+    active:         @color4; /* Color de acento de Wallust */
+    urgent:         #ff0000;
+}
+
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       900px; /* Ancho cómodo */
+    height:                      750px; /* Altura contenida */
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      2px solid;
+    border-radius:               15px;
+    border-color:                @active; /* Borde del color de tu tema */
+    background-color:            @background;
+    cursor:                      "default";
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     20px;
+    padding:                     30px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "listview" ];
+}
+
+/* --- BARRA DE BÚSQUEDA --- */
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     12px;
+    border:                      0px solid;
+    border-radius:               10px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+    children:                    [ "prompt", "entry" ];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  @active; /* El texto "Apps" en color del tema */
+    padding:                     0px 10px 0px 0px;
+}
+
+entry {
+    enabled:                     true;
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 "Buscar...";
+    placeholder-color:           inherit;
+}
+
+/* --- LISTA DE APPS --- */
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       7; /* Muestra 7 apps a la vez */
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     10px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+/* --- ELEMENTO INDIVIDUAL --- */
+element {
+    enabled:                     true;
+    spacing:                     15px;
+    margin:                      0px;
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               10px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+    orientation:                 horizontal; /* Icono a la izquierda, texto derecha */
+}
+
+/* Estado Normal */
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+/* Estado Seleccionado */
+element selected.normal {
+    background-color:            @selected; /* Fondo grisáceo */
+    text-color:                  @foreground;
+    border:                      1px solid;
+    border-color:                @active; /* Borde fino del color del tema */
+}
+
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        48px; /* Iconos de tamaño estándar */
+    cursor:                      inherit;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                  inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}

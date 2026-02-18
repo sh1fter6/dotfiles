@@ -1,0 +1,59 @@
+[global]
+    width = (0, 400)
+    height = (0, 300)
+    offset = (20, 20)
+    origin = top-right
+    transparency = 40
+    frame_width = 1
+    frame_color = "{{color6}}"
+    corner_radius = 12
+    background = "#000000"
+    foreground = "{{foreground}}"
+    font = Sans 10
+    horizontal_padding = 15
+    padding = 10
+    text_icon_padding = 15
+    icon_theme = hicolor
+    icon_position = left
+    max_icon_size = 64
+    timeout = 10
+    shrink = yes
+    follow = keyboard
+    word_wrap = yes
+    
+    show_indicators = no
+    
+    # Mouse actions
+    mouse_left_click = do_action, close_current
+    mouse_middle_click = close_all
+    mouse_right_click = close_current
+
+[urgency_low]
+    timeout = 5
+    background = "#000000"
+    foreground = "{{foreground}}"
+
+[urgency_normal]
+    timeout = 5
+    background = "#000000"
+    foreground = "{{foreground}}"
+
+[urgency_critical]
+    timeout = 0
+    background = "#000000"
+    foreground = "{{color1}}"
+
+# --- Application Specific Rules ---
+
+[discord_focus]
+    appname = "Vesktop"
+    mouse_left_click = do_action, close_current
+
+[discord_alt_focus]
+    appname = "discord"
+    mouse_left_click = do_action, close_current
+
+[whatsapp_focus]
+    appname = "Brave"
+    summary = "*WhatsApp*"
+    mouse_left_click = do_action, close_current

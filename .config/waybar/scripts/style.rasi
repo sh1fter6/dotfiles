@@ -1,0 +1,105 @@
+/* Rofi Theme based on Wallust colors */
+
+* {
+    /* Hardcoded from Wallust for now, as importing can be tricky without direct .rasi gen */
+    background:     rgba(0, 0, 0, 0.8);
+    background-alt: rgba(0, 0, 0, 0.4);
+    foreground:     #C1B3B5;
+    selected:       #D43A00;
+    active:         #D4AA9A;
+    urgent:         #D43A00;
+    
+    border-color:   @selected;
+    handle-color:   @active;
+    
+    width: 600px;
+    font: "JetBrainsMono Nerd Font 14";
+}
+
+window {
+    height: 360px;
+    border: 2px;
+    border-radius: 12px;
+    border-color: @border-color;
+    background-color: @background;
+    anchor: center;
+    location: center;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ inputbar, listview ];
+    padding: 20px;
+    spacing: 10px;
+}
+
+inputbar {
+    background-color: transparent;
+    children: [ prompt, entry ];
+    text-color: @foreground;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: @background-alt;
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @selected;
+    padding: 0px 10px 0px 0px;
+    font: "JetBrainsMono Nerd Font Bold 14";
+}
+
+entry {
+    background-color: transparent;
+    text-color: @foreground;
+    placeholder: "Search...";
+    placeholder-color: inherit;
+}
+
+listview {
+    background-color: transparent;
+    margin: 10px 0px 0px 0px;
+    columns: 1;
+    lines: 6;
+    spacing: 5px;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+}
+
+element {
+    background-color: transparent;
+    text-color: @foreground;
+    orientation: horizontal;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+element-icon {
+    background-color: transparent;
+    text-color: inherit;
+    size: 24px;
+    border: 0px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    highlight: none;
+    vertical-align: 0.5;
+    margin: 0px 10px;
+}
+
+element selected {
+    background-color: @selected;
+    text-color: #000000;
+}
+
+element active {
+    text-color: @active;
+}
+
+element urgent {
+    background-color: @urgent;
+    text-color: #000000;
+}

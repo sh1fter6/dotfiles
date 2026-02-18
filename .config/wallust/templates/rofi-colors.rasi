@@ -1,0 +1,8 @@
+@define-color primary {{color2 | saturate(0.8) | lighten(0.4)}};
+@define-color secondary-container {{color4 | saturate(0.8) | lighten(0.4)}};
+@define-color accent {{color2 | saturate(0.8) | lighten(0.4)}};
+@define-color on-primary #000000;
+@define-color on-secondary #ffffff;
+@define-color on-surface {{foreground | lighten(0.6)}};
+@define-color on-primary-fixed rgba(0, 0, 0, 0.8);
+@define-color error {{color1}};

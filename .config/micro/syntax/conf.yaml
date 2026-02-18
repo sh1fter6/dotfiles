@@ -1,0 +1,29 @@
+filetype: conf
+
+detect:
+    filename: "\\.(conf|ini|cfg)$"
+
+rules:
+    # Comentarios: Todo lo que empieza por # hasta el final de línea
+    - comment: "^\\s*#.*$"
+    - comment: "\\s#.*$"
+    
+    # Asignaciones (clave = valor)
+    # La clave (antes del =) en Magenta/Rosa
+    - identifier: "^\\s*[a-zA-Z0-9_.-]+\\s*="
+    
+    # Valores numéricos en Cyan
+    - constant.number: "\\b\\d+\\b"
+    
+    # Strings entre comillas en Verde
+    - constant.string: "\".*\""
+    
+    # Variables tipo $variable en Rojo
+    - identifier.var: "\\$[a-zA-Z0-9_]+"
+    
+    # Secciones [General] en Azul/Cyan
+    - preproc: "\\[.*\\]"
+    - preproc: "\\{.*\\}"
+
+    # Símbolos =, {, } en Blanco
+    - symbol: "[{}=]"

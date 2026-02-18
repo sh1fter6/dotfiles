@@ -1,0 +1,190 @@
+/**
+ * Rofi Wallpaper Selector Config
+ * Diseño: Split View (Imagen a la izquierda, Lista a la derecha)
+ */
+
+configuration {
+    modi:                        "dmenu";
+    show-icons:                  false;
+    drun-display-format:         "{name}";
+    font:                        "JetBrainsMono Nerd Font Bold 10";
+}
+
+/* ==========================================================================
+   COLORES
+   ========================================================================== */
+* {
+    background:     #1E1E2E;
+    background-alt: #2A2A3C;
+    foreground:     #CDD6F4;
+    selected:       #89B4FA;
+    active:         #A6E3A1;
+    urgent:         #F38BA8;
+    
+    border-col:     #89B4FA;
+}
+
+/* ==========================================================================
+   VENTANA PRINCIPAL
+   ========================================================================== */
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       60%;
+    height:                      55%;
+    x-offset:                    0px;
+    y-offset:                    0px;
+
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      2px solid;
+    border-radius:               12px;
+    border-color:                @border-col;
+    cursor:                      "default";
+    background-color:            @background;
+}
+
+/* ==========================================================================
+   CONTENEDOR PRINCIPAL (Mainbox)
+   Divide la ventana en dos partes: Imagen y Lista
+   ========================================================================== */
+mainbox {
+    enabled:                     true;
+    spacing:                     0px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px 0px 0px 0px;
+    border-color:                @border-col;
+    background-color:            transparent;
+    children:                    [ "imagebox", "listbox" ];
+}
+
+/* --- LADO IZQUIERDO: IMAGEN --- */
+imagebox {
+    padding:                     20px;
+    background-color:            transparent;
+    /* NOTA: Rofi carga esto al inicio. Para cambiarlo dinámicamente necesitas scripts externos */
+    background-image:            url("~/.config/hypr/current_wallpaper", height);
+    orientation:                 vertical;
+    children:                    [ "dummy", "mode-switcher" ]; 
+    /* El dummy empuja contenido, útil si quieres poner texto sobre la imagen */
+}
+
+/* --- LADO DERECHO: LISTA --- */
+listbox {
+    spacing:                     20px;
+    padding:                     20px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "inputbar", "message", "listview" ];
+}
+
+/* ==========================================================================
+   INPUTBAR (Barra de búsqueda)
+   ========================================================================== */
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    border-color:                @border-col;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    children:                    [ "textbox-prompt-colon", "entry" ];
+}
+
+textbox-prompt-colon {
+    enabled:                     true;
+    expand:                      false;
+    str:                         ""; /* Icono de lupa */
+    padding:                     12px 16px;
+    border-radius:               10px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+}
+
+entry {
+    enabled:                     true;
+    padding:                     12px 16px;
+    border-radius:               10px;
+    background-color:            @background-alt;
+    text-color:                  @foreground;
+    cursor:                      text;
+    placeholder:                 "Buscar Wallpaper...";
+    placeholder-color:           inherit;
+}
+
+/* ==========================================================================
+   LISTVIEW (La lista de archivos)
+   ========================================================================== */
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       6;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   true; /* Scrollbar activado */
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      0px solid;
+    border-radius:               0px;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      "default";
+}
+
+/* Scrollbar styling */
+scrollbar {
+    handle-width:                5px ;
+    handle-color:                @selected;
+    border-radius:               10px;
+    background-color:            @background-alt;
+}
+
+/* ==========================================================================
+   ELEMENTOS DE LA LISTA
+   ========================================================================== */
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     10px;
+    border:                      0px solid;
+    border-radius:               10px;
+    border-color:                @border-col;
+    background-color:            transparent;
+    text-color:                  @foreground;
+    cursor:                      pointer;
+}
+
+/* ESTADO NORMAL */
+element normal.normal {
+    background-color:            transparent;
+    text-color:                  @foreground;
+}
+
+/* ESTADO SELECCIONADO */
+element selected.normal {
+    background-color:            @selected;
+    text-color:                  @background;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+}

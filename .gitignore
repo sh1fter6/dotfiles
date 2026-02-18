@@ -1,0 +1,41 @@
+# --- Editor backups & Temporaries ---
+*.save*
+*.bak
+*.tmp
+*~
+.#*
+*.swp
+*.swo
+
+# --- Micro Editor specific ---
+.config/micro/buffers/
+.config/micro/backups/
+%home%*
+
+# --- System & Shell logs ---
+*.log
+.bash_history
+.zsh_history
+.python_history
+.xsession-errors
+
+# --- Caches & Compiled files ---
+**/*.cache/
+**/cache/
+__pycache__/
+*.pyc
+.sass-cache/
+.node_repl_history
+
+# --- Secrets & Sensitive info ---
+**/.env
+**/*.pem
+**/*.key
+**/id_rsa*
+**/id_ed25519*
+.gnupg/
+.ssh/
+
+# --- OS specific ---
+.DS_Store
+thumbs.db

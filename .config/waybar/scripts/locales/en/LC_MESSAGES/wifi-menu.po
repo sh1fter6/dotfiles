@@ -1,0 +1,34 @@
+# WiFi Menu translations
+# English (en) - Default/Base
+#
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: en\n"
+
+msgid "Forget saved network"
+msgstr "Forget saved network"
+
+msgid "Refresh list"
+msgstr "Refresh list"
+
+msgid "Connected"
+msgstr "Connected"
+
+msgid "Searching networks..."
+msgstr "Searching networks..."
+
+msgid "No WiFi adapter found"
+msgstr "No WiFi adapter found"
+
+msgid "Connecting to"
+msgstr "Connecting to"
+
+msgid "Disconnected"
+msgstr "Disconnected"
+
+msgid "No saved networks found"
+msgstr "No saved networks found"
+
+msgid "Forgotten:"
+msgstr "Forgotten:"

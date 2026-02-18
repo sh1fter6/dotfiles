@@ -1,0 +1,86 @@
+/**
+ * Rofi Popup Theme for Waybar Menus
+ * Compact, top-right floating menu
+ */
+
+configuration {
+    show-icons: false;
+    font: "JetBrainsMono Nerd Font 10";
+}
+
+@import "~/.cache/wallust/colors-rofi.rasi"
+
+* {
+    /* Fallback colors if wallust not generated */
+    background: #1e1e2eff;
+    foreground: #cdd6f4ff;
+    selected:   #f5c2e7ff;
+    border-col: #f5c2e7ff;
+}
+
+window {
+    location:       north east;
+    anchor:         north east;
+    x-offset:       -10px;
+    y-offset:       50px;
+    width:          250px;
+    height:         350px;
+    
+    background-color: @background;
+    border:           2px;
+    border-color:     @border-col;
+    border-radius:    10px;
+}
+
+mainbox {
+    background-color: transparent;
+    children: [ inputbar, listview ];
+    padding: 10px;
+}
+
+inputbar {
+    children: [ prompt, entry ];
+    background-color: transparent;
+    text-color: @foreground;
+    margin: 0 0 10px 0;
+}
+
+prompt {
+    enabled: true;
+    padding: 5px;
+    background-color: @selected;
+    text-color: @background;
+    border-radius: 5px;
+    margin: 0 5px 0 0;
+}
+
+entry {
+    background-color: rgba(255,255,255,0.1);
+    text-color: @foreground;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+listview {
+    background-color: transparent;
+    columns: 1;
+    lines: 8;
+}
+
+element {
+    padding: 5px;
+    text-color: @foreground;
+    background-color: transparent;
+}
+
+element selected {
+    background-color: @selected;
+    text-color: @background;
+    border-radius: 5px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}

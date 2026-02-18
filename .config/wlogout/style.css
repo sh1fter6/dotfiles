@@ -1,0 +1,57 @@
+@import "../../.cache/wallust/colors-wlogout.css";
+
+* {
+    background-image: none;
+    box-shadow: none;
+}
+
+window {
+    background-color: @background;
+}
+
+button {
+    margin: 8px;
+    border-width: 2px;
+    border-radius: 30px;
+    border-color: @color2;
+    color: @foreground;
+    background-color: rgba(0, 0, 0, 0.1);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    transition: all 150ms ease-in;
+    box-shadow: 0px 0px 0px black;
+}
+
+button:focus,
+button:active,
+button:hover {
+    background-color: @color2;
+    border-color: @color2;
+    color: #000000;
+    outline-style: none;
+}
+
+#logout {
+    background-image: image(url("icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("icons/suspend.png"));
+}
+
+#hibernate {
+    background-image: image(url("icons/hibernate.png"));
+}
+
+#shutdown {
+    background-image: image(url("icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("icons/reboot.png"));
+}
+
+#lock {
+    background-image: image(url("icons/lock.png"));
+}

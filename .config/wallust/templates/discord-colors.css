@@ -1,0 +1,3 @@
+:root {
+  --wallust-cursor: {{cursor | saturate (0.7)}};
+}

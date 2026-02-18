@@ -1,0 +1,29 @@
+# General Settings
+set autoindent
+set constantshow
+set fill -8
+set indicator
+set linenumbers
+set minibar
+set mouse
+set smarthome
+set softwrap
+set tabsize 4
+set tabstospaces
+set trimblanks
+set unix
+
+# Interface Colors
+set titlecolor bold,#fff,#000
+set promptcolor bold,#fff,#000
+set statuscolor bold,#fff,#000
+set errorcolor bold,#fff,#f00
+set spotlightcolor #000,#ff0
+set selectedcolor bold,#fff,#505
+set scrollercolor #aaa,#222
+set stripecolor ,#444
+
+# Key Elements
+set numbercolor #0ff,#000
+set keycolor bold,#0ff,#000
+set functioncolor #0f0,#000

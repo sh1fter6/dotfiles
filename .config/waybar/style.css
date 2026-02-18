@@ -1,0 +1,221 @@
+@import "/home/sh1fter/.cache/wallust/colors-waybar.css";
+
+* {
+    border: 1px;
+    border-radius: 0;
+    font-family: "Poppins", "MesloLGMDZ Nerd Font";
+    font-weight: 700;
+    font-size: 19px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(0, 0, 0, 0);
+    color: @foreground;
+}
+
+tooltip {
+    background: #1e1e2e;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: @color2;
+}
+
+tooltip label {
+    color: @foreground;
+}
+
+#workspaces {
+    background: rgba(0, 0, 0, 0.6);
+    margin: 2px 1px;
+    padding: 0px 6px;
+    border-radius: 16px;
+    border: 1px solid @accent-text;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    margin: 0 2px;
+    border-radius: 16px;
+    color: @accent-border;
+    background-color: transparent;
+    transition: all 0.3s ease-in-out;
+
+}
+
+#workspaces button.active {
+    color: @accent-border;
+    background-color: rgba(255, 255, 255, 0.1);
+    min-width: 40px;
+    padding: 0 10px;
+    background-image: none;
+    box-shadow: none;
+}
+
+#workspaces button:hover {
+    background-color: @accent-text;
+    color: #FFFFFF;
+    background-image: none;
+    box-shadow: none;
+}
+
+#cpu,
+#memory {
+    background-color: transparent;
+    color: @accent-border;
+    padding: 0 4px;
+    margin: 0;
+}
+
+#performance {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 16px;
+    margin: 2px 1px;
+    padding: 0px 6px;
+    border: 1px solid @accent-text;
+}
+
+#bluetooth {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0px 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 2px 1px;
+    border-radius: 16px;
+    color: @accent-border;
+    border: 1px solid @accent-text;
+    transition: all 0.3s ease;
+}
+
+#custom-dnd {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-left: 7px;
+    padding-right: 10px;
+    margin: 2px 1px;
+    border-radius: 16px;
+    color: @accent-border;
+    border: 1px solid @accent-text;
+    transition: all 0.3s ease;
+}
+
+#network {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-left: 1px;
+    padding-right: 10px;
+    margin: 2px 1px;
+    border-radius: 16px;
+    color: @accent-border;
+    border: 1px solid @accent-text;
+    transition: all 0.3s ease;
+}
+
+#custom-shutdown {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0px 10px;
+    padding-left: 8px;
+    padding-right: 12px;
+    margin: 2px 1px;
+    border-radius: 16px;
+    color: @accent-border;
+    border: 1px solid @accent-text;
+    transition: all 0.3s ease;
+}
+
+#pulseaudio {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 2px 1px;
+    border-radius: 16px;
+    color: @accent-border;
+    border: 1px solid @accent-text;
+    transition: all 0.3s ease;
+}
+
+#battery {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0px 10px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 2px 0;
+    border-radius: 16px;
+    color: @accent-border;
+    border: 1px solid @accent-text;
+    transition: all 0.3s ease;
+}
+
+#custom-clock {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0px 12px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 2px 1px;
+    border-radius: 16px;
+    color: @accent-border;
+    border: 1px solid @accent-text;
+    transition: all 0.3s ease;
+}
+
+#mpris {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0px 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+    margin: 2px 1px;
+    border-radius: 16px;
+    color: @accent-border;
+    border: 1px solid @accent-text;
+    transition: all 0.3s ease;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @accent-border;
+}
+
+#custom-shutdown {
+    color: #FF0000;
+    padding-right: 12px;
+}
+
+#bluetooth:hover,
+#network:hover,
+#pulseaudio:hover,
+#battery:hover,
+#custom-dnd:hover,
+#custom-shutdown:hover,
+#custom-clock:hover,
+#mpris:hover,
+#performance:hover {
+    border-color: @accent-border;
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 1px 1px @accent-border;
+}
+
+#battery.charging,
+#battery.plugged {
+    color: @color2;
+}
+
+#battery.critical:not(.charging) {
+    background-color: #f38ba8;
+    color: #1e1e2e;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: @accent-border;
+        color: #000000;
+    }
+}
+
+#mpris.paused {
+    color: @color7;
+    font-style: italic;
+}

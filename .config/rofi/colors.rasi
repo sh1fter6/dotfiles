@@ -1,0 +1,8 @@
+@define-color primary #B29374;
+@define-color secondary-container #74A1CA;
+@define-color accent #B29374;
+@define-color on-primary #000000;
+@define-color on-secondary #ffffff;
+@define-color on-surface #DEE3E4;
+@define-color on-primary-fixed rgba(0, 0, 0, 0.8);
+@define-color error #48676A;

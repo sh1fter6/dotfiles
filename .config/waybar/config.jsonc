@@ -1,0 +1,138 @@
+{
+    "layer": "top",
+    "spacing": 0,
+    "height": 22,
+    "margin-top": 0,
+    "margin-right": 10,
+    "margin-bottom": 0,
+    "margin-left": 4,
+    "modules-left": [
+        "hyprland/workspaces",
+        "mpris"
+    ],
+    "modules-center": [
+        "custom/clock"
+    ],
+    "modules-right": [
+        "group/performance",
+        "bluetooth",
+        "network",
+        "pulseaudio",
+        "battery",
+        "custom/dnd",
+        "custom/shutdown"
+    ],
+    "group/performance": {
+        "orientation": "horizontal",
+        "modules": [
+            "cpu",
+            "memory"
+        ]
+    },
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "urgent": "!",
+            "active": "●",
+            "default": "○"
+        },
+        "sort-by-number": true
+    },
+    "custom/clock": {
+        "exec": "~/.config/waybar/scripts/clock-es.sh",
+        "interval": 60,
+        "format": "{}",
+        "tooltip": false
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "interval": 2,
+        "tooltip": false
+    },
+    "memory": {
+        "format": "   {percentage}%",
+        "interval": 2,
+        "tooltip": false
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "format-charging": "<span color='#00ff00'>{icon}</span> {capacity}%",
+        "format-icons": [
+            "󰁺",
+            "󰁻",
+            "󰁼",
+            "󰁽",
+            "󰁾",
+            "󰁿",
+            "󰂀",
+            "󰂁",
+            "󰂂",
+            "󰁹"
+        ],
+        "interval": 5,
+        "tooltip": false
+    },
+    "network": {
+        "format-wifi": "     {essid}",
+        "format-ethernet": " 󰈀   Ethernet",
+        "format-disconnected": " 󰤯   Sin red",
+        "tooltip": false,
+        "on-click": "bash ~/.config/waybar/menus/wifi/launch_nm.sh"
+    },
+    "bluetooth": {
+        "format": "󰂯",
+        "format-connected": "󰂱",
+        "tooltip": false,
+        "on-click": "bash /home/sh1fter/.config/waybar/menus/bluetooth/launch_bluetooth.sh"
+    },
+    "pulseaudio": {
+        "format": "{icon}   {volume}",
+        "format-icons": {
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "tooltip": false,
+        "on-click": "python3 /home/sh1fter/.config/waybar/menus/audio/audio_menu.py"
+    },
+    "custom/dnd": {
+        "exec": "~/.config/waybar/scripts/dnd_status.sh",
+        "interval": 1,
+        "format": "{}",
+        "on-click": "~/.config/waybar/scripts/toggle_dnd.sh",
+        "tooltip": false
+    },
+    "custom/shutdown": {
+        "format": "",
+        "on-click": "bash ~/.config/waybar/menus/power/launch_power.sh",
+        "tooltip": false
+    },
+    "mpris": {
+        "format": "⁺‧₊˚ ཐི {title} ཋྀ ˚₊‧⁺",
+        "format-paused": "<i>⁺‧₊˚ ཐི {artist} - {title} ཋྀ ˚₊‧⁺</i>",
+        "player-icons": {
+            "default": "<span>󰎈</span>",
+            "spotify": "<span></span>",
+            "firefox": "<span></span>",
+            "chromium": "<span></span>",
+            "mpv": "<span></span>"
+        },
+        "status-icons": {
+            "paused": "<span>󰏤</span>"
+        },
+        "tooltip": false,
+        "artist-len": 15,
+        "title-len": 25,
+        "on-click": "playerctl next",
+        "on-click-right": "playerctl play-pause",
+        "on-click-middle": "playerctl previous"
+    }
+}
